@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style type="text/css">
+        #header{
+            width: 100%;
+            height: 100px;
+            background: gray;
+            border: 1px solid black;
+        }
+        #section1{
+            height: 400px;
+            background: yellow;
+            border: 1px solid black;
+        }
+        #section2{
+            width: 100%;
+            height: 500px;
+            background: lime;
+            border: 1px solid black;
+        }
+        #section2 #aside{
+            width: 15%;
+            height: 500px;
+            /* border: 1px solid black; */
+            float: left;
+        }
+        #section2 #article{
+            width: 85%;
+            height: 500px;
+            background: red;
+            /* border: 1px solid black; */
+            float: right;
+        }
+        #section3{
+            width: 100%;
+            height: 400px;
+            background: orange;
+            border: 1px solid black;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background: black;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="header">This Is Header</div>
+    <div id="section1">This Is section1</div>
+    <div id="section2">
+        <div id="aside">Thia Is aside Part</div>
+        <div id="article">This Is Article Part</div>
+    </div>
+    <div id="section3">This is section3</div>
+    <div id="footer">This Is Footer</div>
+
+</body>
+</html>
