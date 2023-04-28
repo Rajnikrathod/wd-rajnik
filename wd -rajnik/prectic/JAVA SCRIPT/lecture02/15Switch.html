@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <ul>
+        <li>tea</li>
+        <li>coffee</li>
+        <li>cold-drink</li>
+        <button onclick="Order()">Order</button>
+        <script>
+            var choice ;
+            function Order(){
+                choice = prompt("enter your order:")
+                switch (choice) {
+                    case 'tea':
+                        document.write("Your choice is Tea");
+                        break;
+                    case 'coffee':
+                        document.write("Your choice is coffee");
+                        break; 
+                    case 'cold-drink':
+                        document.write("Your choice is cold-drink");
+                        break;    
+                    default:
+                        document.write("Enter valid choice....")
+                        break;
+                }
+            }
+        </script>
+    </ul>
+</body>
+</html>
