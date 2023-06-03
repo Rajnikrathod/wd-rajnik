@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic math operator</title>
+    <style>
+        body{
+            border: 1px solid black;
+            margin: 50px 300px;
+            font-size: 25px;
+            padding: 10px 40px;
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            /* border: 1px solid black; */
+            margin-left: 120px;
+            height: 25px;
+            width: 250px;
+        }
+        #val1{
+            margin-left: 128px;
+        }
+        .btn{
+            /* border: 1px solid black; */
+            width: 250px;
+            margin: 40px 0;
+        }
+        button{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-right: 6px;
+            
+        }
+        p{
+            /* border: 1px solid black; */
+            position: absolute;
+            margin: 40px 0 0 380px;
+        }
+        #ans{
+            /* border: 1px solid black; */
+            position: absolute;
+            margin: 40px 0 0 500px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <h2>Math Operation</h2>
+        <label for="">Enter 1st number :</label>
+    <input type="text" id="val1" value=""><br>
+    <label for="">Enter 2nd number :</label>
+    <input type="text" id="val2">
+    </div>
+    <p>Answer is:<p id="ans"></p></p>
+    <div class="btn">
+    <button id="add" onclick="add()">+</button>
+    <button id="sub" onclick="sub()">-</button>
+    <button id="mul" onclick="mul()">*</button>
+    <button id="div" onclick="div()">/</button>
+    <button id="par" onclick="par()">%</button>
+    </div>
+    <script>
+        var val_1 = document.getElementById("val1").value;
+        var val_2 = document.getElementById("val2").value;
+        var answer = document.getElementById("ans");
+        console.log(val_1);
+        console.log(val_2);
+
+        function add(){
+            var ans = parseInt(val_1) + parseInt(val_2);
+            answer.innerHTML = ans;
+            }
+
+        function sub(){
+            var ans = parseInt(val_1) - parseInt(val_2);
+            answer.innerHTML = ans;
+        }
+
+        function mul(){
+            var ans = parseInt(val_1) * parseInt(val_2);
+            answer.innerHTML = ans;
+        }
+
+        function div(){
+            var ans = parseInt(val_1) / parseInt(val_2);
+            answer.innerHTML = ans;
+        }
+
+        function par(){
+            var ans = parseInt(val_1) % parseInt(val_2);
+                answer.innerHTML = ans;
+        }
+    </script>
+</body>
+</html>

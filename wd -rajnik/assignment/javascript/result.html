@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        body{
+            border: 1px solid black;
+            margin: 50px 300px;
+            font-size: 20px;
+            padding: 20px 60px;
+        }
+        h3{
+            text-align: center;
+        }
+        .enter{
+            display: flex;
+        }
+        .input{
+            /* border: 1px solid black; */
+            margin: 0 0 0 150px;
+        }
+        input{
+            width: 250px;
+        }
+        button{
+            /* border: 1px solid black; */
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        .result{
+            /* border: 1px solid black; */
+            display: flex;
+            margin: 20px 0 0 0;
+        }
+        .p1{
+            /* border: 1px solid black; */
+            margin-top: -0px;
+            margin-left: 50px;
+        }
+        .p2{
+            /* border: 1px solid black; */
+            margin-top: -0px;
+            margin-left: 200px;
+        }
+        #ans, #per{
+            margin: 0;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Marksheet for information technology</h2>
+    <h3>Enter Marks</h3>
+    <div class="enter">
+    <div class="label">
+    <label for="">1. C Language</label><br>
+    <label for="">2. C++ Language</label><br>
+    <label for="">3. Database</label><br>
+    <label for="">4. HTML</label><br>
+    <label for="">5. CSS</label><br>
+    <label for="">6. php</label><br>
+    <label for="">7. Core java</label>
+    </div>
+    <div class="input">
+    <input type="text" id="val1" value=""><br>
+    <input type="text" id="val2"><br>
+    <input type="text" id="val3"><br>
+    <input type="text" id="val4"><br>
+    <input type="text" id="val5"><br>
+    <input type="text" id="val6"><br>
+    <input type="text" id="val7"><br>
+    <button id="btn" onclick="result()">result</button><br>
+    </div>
+    </div>
+    <div class="result">
+    <p class="p1">Total is:<p id="ans"></p>/350</p>
+    <p class="p2">Percentage is:<p id="per"></p>%</p>
+    </div>
+    <script>
+        var val_1 = document.getElementById('val1').value;
+        var val_2 = document.getElementById('val2').value;
+        var val_3 = document.getElementById('val3').value;
+        var val_4 = document.getElementById('val4').value;
+        var val_5 = document.getElementById('val5').value;
+        var val_6 = document.getElementById('val6').value;
+        var val_7 = document.getElementById('val7').value;
+        var answer = document.getElementById('ans')
+        var percentage = document.getElementById('per')
+
+        function result(){
+            var ans = parseInt(val_1) + parseInt(val_2) + parseInt(val_3) + parseInt(val_4) + parseInt(val_5) + parseInt(val_6) + parseInt(val_7);
+            answer.innerHTML = ans;
+            
+            var per = ans / 350 * 100;
+            percentage.innerHTML = per;
+        }
+
+    </script>
+</body>
+</html>

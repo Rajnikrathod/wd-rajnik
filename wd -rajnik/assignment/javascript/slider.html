@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        div{
+            border: 1px solid black;
+            height: 600px;
+            background: #333;
+        }
+        img{
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            margin: 100px 350px ;
+        }
+        #but{
+            position: absolute;
+            margin: 430px 620px;
+            height: 50px;
+            font-size: 25px;
+            background: transparent;
+            border: none;
+            color: #fff;
+        }
+        #but2{
+            position: absolute;
+            margin: 430px 520px;
+            height: 50px;
+            font-size: 25px;
+            background: transparent;
+            border: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" alt="" id="img">
+    <button id="but" onclick="change()"<i class="fa-solid fa-arrow-right"></i></button>
+    <button id="but2" onclick="change2()"<i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+    <script>
+        var a = document.getElementById("img");
+         function change()
+        {
+            if(a.src == "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg")
+            {
+                a.src = "https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg"
+            }
+            else if(a.src == "https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg")
+            {
+                a.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFSM5pnqNwlkgYdN7SO5hwDl66TOjvgW9h5g6yWXcMSPd_oc-gs4s4UoPqRHMMf2GOQdg&usqp=CAU"
+            }
+            else if(a.src == "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFSM5pnqNwlkgYdN7SO5hwDl66TOjvgW9h5g6yWXcMSPd_oc-gs4s4UoPqRHMMf2GOQdg&usqp=CAU")
+            {
+                a.src = "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w="
+            }
+            else if(a.src == "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=")
+            {
+                a.src = "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
+            }
+        }
+        function change2()
+        {
+            if(a.src == "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg")
+            {
+                a.src = "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w="
+            }
+            else if(a.src == "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=")
+            {
+                a.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFSM5pnqNwlkgYdN7SO5hwDl66TOjvgW9h5g6yWXcMSPd_oc-gs4s4UoPqRHMMf2GOQdg&usqp=CAU"
+            }
+            else if(a.src == "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFSM5pnqNwlkgYdN7SO5hwDl66TOjvgW9h5g6yWXcMSPd_oc-gs4s4UoPqRHMMf2GOQdg&usqp=CAU")
+            {
+                a.src = "https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg"
+            }
+            else if(a.src == "https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg")
+            {
+                a.src = "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
+            }
+        }
+    </script>
+</body>
+</html>
