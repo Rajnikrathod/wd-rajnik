@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animacation-slider</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://malsup.github.io/jquery.cycle.all.js"></script>
+    <style>
+        .slide{
+            position: absolute;
+            /* position: relative; */
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+        img{
+            width: 98%;
+            height: 500px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="img/banner1.jpg" alt="" srcset="" id="img1">
+        <img src="img/WIND.jpg" alt="" srcset="">
+        <img src="img/poster1.jpg" alt="" srcset="">
+    </div>
+    <script>
+        $(document).ready(function(){
+        $('.slide').cycle('shuffle')
+        });
+        $(document).ready(function(){
+        $('.slide').click(function(){
+            $('img').animate({
+                width: '95%',
+                height:'450px',
+                margin: '10px 0 0 20px',
+                // transition: '4s'
+            }, 1000)
+        })
+        })
+    </script>
+</body>
+</html>
+

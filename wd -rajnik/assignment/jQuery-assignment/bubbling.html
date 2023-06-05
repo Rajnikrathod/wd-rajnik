@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling Tickling Example</title>
+  <script src="jquery-3.6.4.min.js"></script>
+  <style>
+    #grand-grand-grandparent{
+      border: 1px solid black;
+      color: black;
+    }
+    #grand-grandparent{
+      border: 1px solid black;
+      /* background: aqua; */
+      width: 40%;
+      margin: 0 0 20px 20px;
+    }
+    #grandparent{
+      border: 1px solid black;
+      /* background: antiquewhite; */
+      width: 80%;
+      margin: 0 0 20px 20px;
+    }
+    #parent{
+      border: 1px solid black;
+      /* background: aquamarine; */
+      width: 80%;
+      height: 50px;
+      margin: 0 0 20px 0px;
+      list-style: none;
+    }
+    #child{
+      border: 1px solid black;
+      /* background: antiquewhite; */
+      width: 20%;
+      position: absolute;
+      margin: 21px 0 10px -50px;
+    }
+  </style>
+</head>
+<body id="grand-grand-grandparent">
+  <h1>grand-grand-grandparent</h1>
+  <div id="grand-grandparent">
+    <h2>grand-Grandparent</h2>
+    <ul id="grandparent">
+      <h3>grandparent</h3>
+      <li id="parent">
+        direct-parent
+        <span id="child">
+          span
+        </span>
+      </li>
+    </ul>
+  </div>
+  <script>
+   $(document).ready(function(){
+    $('#child').parents().css({'border':'3px solid red','color':'red'});
+      });
+  </script>
+</body>
+</html>
